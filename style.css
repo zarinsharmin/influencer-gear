@@ -10,7 +10,8 @@ body{
 .header-section{
     display: flex;
     justify-content: space-between;
-    padding: 50px 120px;   
+    padding-left:  120px;
+    padding-top: 60px;   
 }
 /* navigation design */
 .nav-bar ul{
@@ -34,24 +35,21 @@ body{
 .influence{
     display: flex;
     justify-content: space-between;
-    padding: 30px 120px;
+    padding-left: 120px;
 }
 .influence-paragraph {
-    padding-top: 30px;
-    padding-right: 60px;
+    padding-top: 110px;
+    padding-right: 40px;
 }
 .influence-heading{
     font-size: 40px;
 }
-
-
 .half-width{
     width: 50%;
-    padding-right: 5%;
+    padding-right: 50px;
 }
-.half-width img{
-    width:70%;
-    padding-left: 80px;
+.influence img{
+    width:110%;  
 }
 .button-style{
     background-color: #E02C6D;
@@ -59,13 +57,13 @@ body{
     padding: 10px 24px;
     border: 1px solid;
     border-radius: 40px;
-
 }
 
 .onling-shopping{
     display: flex;
     justify-content: space-between;
-    margin: 50px 165px;
+    margin-left:  165px;
+    margin-right:  165px;
     padding:20px;
     box-shadow: 1px 0 1px silver;
 }
@@ -73,11 +71,8 @@ body{
     width: 6%;
 }
 
-.popular-collection{
-   padding-left: 80px;
-   padding-right: 80px;
-   margin-top: 40px;
-}
+
+
 /* popular collection style */
 .collections{
     display: grid;
@@ -86,6 +81,11 @@ body{
     padding:30px;
 
 }
+.popular-collection{
+    padding-left: 80px;
+    padding-right: 80px;
+    margin-top: 100px;
+ }
 .collection-discription{
     padding: 17px;
     box-shadow:  10px 10px 40px silver;
@@ -102,6 +102,31 @@ body{
    
 }
 
+/* features style */
+.feature{
+    display: flex;
+    justify-content: space-between;
+   margin:100px 165px;
+}
+.feature img{
+    width: 404px;
+    height: 270px;
+}
+.feature-paragraph{
+    margin-left: 80px;
+    padding:5px;
+}
+.feature-heading{
+    font-weight: bold;
+    font-size: 32px;
+}
+.feature-button{
+    background-color: #E02C6D;
+    color:white;
+    padding: 10px 24px;
+    border: 1px solid; 
+}
+
 /* footer design */
 footer{
     background-color:#120E43 ;
@@ -115,4 +140,50 @@ footer i{
 .footer-design{
     display: flex;
     justify-content:center;
+}
+/*...........media quaries............. */
+/* mobile devices */
+@media only screen and (max-width:688px) {
+    .influence{
+        width:100%;
+        flex-direction: column;
+        margin-left: 30px;
+    }
+    .influence img{
+        width:180%;  
+        margin-left: -30px;
+    }
+    .feature{
+        flex-direction: column; 
+        margin: 50px 80px;
+    }
+    .feature-button{
+        padding:10px 20px;
+    }
+    
+    .collections{
+        grid-template-columns: repeat(1,1fr);
+    }
+    footer{
+        width: 150%; 
+    }
+   
+}
+/* tablet devices */
+@media only screen and (min-width:688px) and (max-width:992px) {
+    .collections{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .influence{
+        width:100%;
+        flex-direction: column;
+        margin-left: 60px;
+    }
+    .feature{
+        flex-direction: column; 
+        margin: 50px 100px;
+    }
+    footer{
+        width: 100%; 
+    }
 }
